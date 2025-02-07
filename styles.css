@@ -323,6 +323,18 @@ header::before {
 }
 
 @media (max-width: 1024px) {
+    .hero {
+        background-image: url(images/device-background.jpg);
+    }
+
+    .about {
+        background-image: url(images/device-background.jpg);
+    }
+
+    .reviews {
+        background-image: url(images/device-background.jpg);
+    }
+    
     .navbar ul {
         gap: 10px;
     }
