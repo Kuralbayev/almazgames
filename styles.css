@@ -4,6 +4,33 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: gold;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    height: 10%;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #020202;
+  }
+  
+  ::-webkit-scrollbar-horizontal {
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-vertical {
+    width: 8px;
+  }
+  
 html {
     scroll-behavior: smooth;
 }
@@ -245,4 +272,123 @@ header::before {
     box-shadow: 0 0 30px rgba(255, 140, 0, 1);
     background: linear-gradient(45deg, #ff5722, #ff9800);
     animation: fireGlow 1.5s infinite alternate;
+}
+
+.about {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/alluring\ treasure.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.reviews {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/alluring\ treasure.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.reviews::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .navbar ul {
+        gap: 10px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 70px;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .navbar-logo {
+        font-size: 1.5rem;
+        align-items: center;
+    }
+
+    .navbar ul {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .offer {
+        max-width: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .cta-btn {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+    }
 }
