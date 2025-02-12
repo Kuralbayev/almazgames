@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alluring Treasures</title>
+    <meta name="description" content="Настольная игра Alluring Treasures для любителей приключений и древних легенд. Только 50 коробок в продаже!">
+    <meta name="keywords" content="настольная игра, Alluring Treasures, приключения, стратегическая игра, редкая игра">
+    <meta name="author" content="Almaz Games">
+    <meta property="og:title" content="Alluring Treasures - Настольная игра">
+    <meta property="og:description" content="Ограниченный тираж - только 50 коробок! Погрузись в мир приключений.">
+    <meta property="og:image" content="images/alluring_treasure.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script defer src="javascript.js"></script>
 </head>
 <body>
     <header>
@@ -14,10 +25,10 @@
             <ul id="navbar-links">
                 <li><a href="#hero">Главная</a></li>
                 <li><a href="#about">О игре</a></li>
-                <li><a href="#">Отзывы</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
             </ul>
             <div class="offer">🔥 Только 50 коробок в продаже – успей купить!</div>
-            <button class="navbar-btn">Купить</button>
+            <button onclick="window.location.href='#about'" class="navbar-btn">Купить</button>
         </nav>
     </header>
       
@@ -26,21 +37,22 @@
             <div class="hero-content">
                 <h1>Игра для настоящих искателей приключений!</h1>
                 <p>Ограниченный тираж – только <span>50 коробок!</span></p>
-                <button class="cta-btn">Купить</button>
+                <button onclick="window.location.href='#about'" class="cta-btn">Купить</button>
             </div>
         </section>
 
         <section class="about" id="about">
             <div class="about-content">
-                
+                <h3><span>Alluring Treasure</span> – это настольная игра для любителей приключений, стратегий и древних легенд.
+                    Игра рассчитана на 4 игроков и предлагает уникальный игровой процесс с поиском артефактов,
+                    сражениями и сбором золота.</h3>
+                <button onclick="window.location.href='#about'" class="cta-btn">Купить сейчас</button>
             </div>
         </section>
 
-        <section class="reviews">
-            
-        </section>
+        <section class="reviews" id="reviews">
 
-    <script src="javascript.js"></script>
+        </section>
     </main>
 </body>
 </html>
