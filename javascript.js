@@ -3,6 +3,11 @@ function toggleMenu() {
   menu.classList.toggle('active');
 }
 
+function toggleMenu() {
+  const menu = document.getElementById('navbar-links');
+  menu.classList.toggle('active');
+}
+
 let isScrolling = false;
 const sections = document.querySelectorAll('section');
 
