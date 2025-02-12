@@ -1,12 +1,13 @@
-function toggleMenu() {
-  const menu = document.getElementById('navbar-links');
-  menu.classList.toggle('active');
-}
+// Получаем элементы
+const burgerMenu = document.querySelector('.burger-menu');
+const navbarUl = document.querySelector('.navbar ul');
 
-function toggleMenu() {
-  const menu = document.getElementById('navbar-links');
-  menu.classList.toggle('active');
-}
+// При клике на бургер меню показываем/скрываем список меню
+burgerMenu.addEventListener('click', () => {
+    navbarUl.classList.toggle('active');
+    burgerMenu.classList.toggle('active');
+});
+
 
 let isScrolling = false;
 const sections = document.querySelectorAll('section');
