@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Russo+One&family=Carter+One&family=Passion+One:wght@400;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -36,8 +38,22 @@ html {
 }
 
 body {
-    background: none;
-    overflow: hidden;
+    position: relative;
+    background: url('images/alluring treasure.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Merriweather", serif;
+    font-style: normal;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
 }
 
 header {
@@ -45,6 +61,7 @@ header {
     width: 100%;
     height: 100px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+    backdrop-filter: blur(10px);
     z-index: 1000;
     top: 0;
     left: 0;
@@ -78,6 +95,9 @@ header::before {
     align-items: center;
     justify-content: center;
     display: flex;
+    font-family: "Carter One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .navbar-logo:hover {
@@ -90,7 +110,7 @@ header::before {
     text-align: center;
     align-items: center;
     font-size: 20px;
-    margin: 10px;
+    margin: auto;
     padding: 0;
     gap: 20px;
 }
@@ -122,7 +142,8 @@ header::before {
     padding: 8px 15px;
     font-weight: bold;
     font-size: 18px;
-    margin-right: auto;
+    margin-left: auto;
+    margin-right: 20px;
     white-space: nowrap;
     transition: all 0.3s ease-in-out;
     position: relative;
@@ -180,22 +201,27 @@ header::before {
 }
 
 .navbar-btn {
-    padding: 15px 20px;
-    font-size: 1.4rem;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: #121212;
+    background: gold;
+    border-radius: 8px;
+    text-transform: uppercase;
     font-weight: bold;
-    color: white;
-    background: linear-gradient(45deg, #ff9800, #ff5722);
+    transition: 0.3s;
     border: none;
-    border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.7);
+    font-family: "Russo One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .navbar-btn:hover {
     transform: scale(1.1);
+    background: darkgoldenrod;
+    color: white;
     box-shadow: 0 0 30px rgba(255, 140, 0, 1);
-    background: linear-gradient(45deg, #ff5722, #ff9800);
     animation: fireGlow 1.5s infinite alternate;
 }
 
@@ -235,11 +261,14 @@ header::before {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 800;
     margin-bottom: 15px;
-    color: goldenrod;
-    text-shadow: 2px 2px 0px #000000, 4px 4px 5px rgba(0, 0, 0, 0.3);
+    color: gold;
+    text-shadow: 2px 2px 10px #000000, 4px 4px 5px rgba(0, 0, 0, 0.3);
+    font-family: "Russo One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .hero p {
@@ -269,6 +298,9 @@ header::before {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 0 15px rgba(255, 140, 0, 0.7);
+    font-family: "Russo One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .cta-btn:hover {
@@ -278,73 +310,260 @@ header::before {
     animation: fireGlow 1.5s infinite alternate;
 }
 
-.about {
-    position: relative;
+.about-slider {
     width: 100%;
-    height: 100vh;
-    background-image: url(images/alluring\ treasure.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 60px 20px;
     text-align: center;
 }
 
-.about::before {
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title h2 {
+    font-size: 2.5rem;
+    color: gold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+.title p {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: #121212;
+    background: gold;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background: darkgoldenrod;
+    color: white;
+}
+
+.about-slider {
+    width: 100%;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.game-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 40px;
+    font-family: "Russo One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.slider-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 60px;
+    background: url('images/alluring treasure.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.slider-container::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
 }
 
-.about * {
+.swiper-slide {
     position: relative;
-    z-index: 2;
+    overflow: hidden;
 }
 
-.about-content {
+.swiper-slide {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+.swiper-slide img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.swiper-slide1 {
     position: relative;
-    flex-wrap: nowrap;
+    overflow: hidden;
 }
 
-.about-content h3 {
-    color: white;
-    font-size: 25px;
-    max-width: 50%;
-    font-weight: 700;
+.swiper-slide1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.about-content h3 span {
+.swiper-slide1 img {
+    width: 907px;
+    height: 641px;
+    object-fit: cover;
+}
+
+.slide-tooltip {
+    position: absolute;
+    width: 708px;
+    height: 641px;
+    background: rgba(0, 0, 0, 0.7);
+    color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    pointer-events: none;
+}
+
+.swiper-slide:hover .slide-tooltip {
+    opacity: 1;
+}
+
+.swiper-slide:not(:hover) .slide-tooltip {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.swiper-slide img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.info-block {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.info-block p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.mySwiper2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mySwiper2 .swiper-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+.swiper-button-next {
     color: #ff9800;
 }
 
-.about-content .cta-btn {
-    margin-top: 20px;
-    padding: 15px 20px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(45deg, #ff9800, #ff5722);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.7);
+.swiper-button-prev {
+    color: #ff9800;
 }
 
-.about-content cta-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 30px rgba(255, 140, 0, 1);
-    background: linear-gradient(45deg, #ff5722, #ff9800);
-    animation: fireGlow 1.5s infinite alternate;
+.fomo-section {
+    margin-top: 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 15px;
+}
+
+.fomo-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: gold;
+    font-family: "Russo One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fomo-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.fomo-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.4rem;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fomo-item:last-child {
+    border-bottom: none;
+}
+
+.fomo-item .icon {
+    font-size: 2rem;
+}
+
+.fomo-item .highlight {
+    color: gold;
+    font-weight: bold;
+}
+
+.cta-btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: gold;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-btn:active {
+    background: #e6b800;
 }
 
 .reviews {
@@ -360,11 +579,40 @@ header::before {
     text-align: center;
 }
 
+.reviews::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.reviews * {
+    position: relative;
+    z-index: 2;
+}
+
+.reviews h2 {
+    color: gold;
+    font-size: 30px;
+}
+
 .burger-menu {
     display: none;
 }
 
 @media (max-width: 1024px) {
+    .offer {
+        margin-right:20px;
+        padding: 15px 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
     .hero {
         background-image: url(images/device-background.jpg);
     }
@@ -394,9 +642,10 @@ header::before {
     header {
         background: none;
         height: 70px;
-        flex-direction: column;
-        text-align: center;
-        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
     }
 
     .navbar {
@@ -404,37 +653,29 @@ header::before {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 100%;
-        position: relative;
     }
 
     .navbar-logo {
         font-size: 1.5rem;
-        align-items: center;
         display: none;
     }
 
     .navbar ul {
         display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 50%;
+        background: #333;
+        flex-direction: column;
         text-align: center;
-        align-items: center;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+        padding: 15px 0;
+        border-radius: 8px;
     }
 
     .navbar ul.active {
         display: flex;
-        flex-direction: flex-start;
-        top: 0;
-        left: 0;
-        width: 50%;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 15px 0;
-        border-radius: 8px;
+        animation: slideIn 0.3s ease-out forwards;
     }
 
     .navbar ul li {
@@ -443,16 +684,7 @@ header::before {
 
     .navbar ul li a {
         color: white;
-        opacity: 0.7;
         font-size: 18px;
-    }
-
-    .offer {
-        display: none;
-    }
-
-    .navbar-btn {
-        display: none;
     }
 
     .burger-menu {
@@ -460,216 +692,267 @@ header::before {
         font-size: 2rem;
         cursor: pointer;
         color: white;
-        z-index: 10;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 50px 20px;
     }
 
     .hero h1 {
         font-size: 2rem;
     }
-    
+
     .hero p {
         font-size: 1.2rem;
+    }
+
+    .offer {
+        display: none;
+    }
+
+    .about, .services, .reviews {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .about h2, .services h2, .reviews h2 {
+        font-size: 1.8rem;
+    }
+
+    .about p, .services p, .reviews p {
+        font-size: 1.1rem;
+    }
+
+    .cta-btn {
+        font-size: 1.3rem;
+        padding: 10px 15px;
     }
 }
 
 @media (max-width: 480px) {
     header {
-        background: none;
-    }
-    
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-        height: 95%;
-        position: relative;
+        height: 60px;
+        padding: 8px 15px;
     }
 
-    .navbar-logo {
-        font-size: 1.5rem;
+    .navbar {
+        justify-content: space-between;
         align-items: center;
-        display: none;
     }
 
     .navbar ul {
-        display: none;
-        text-align: center;
-        align-items: center;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .navbar ul.active {
-        display: flex;
-        flex-direction: flex-end;
-        top: 0;
+        width: 100%;
+        position: absolute;
+        top: 60px;
         left: 0;
-        margin-left: 10px;
-        min-width: 100%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
-        position: relative;
-        border-radius: 5px;
+        background: #222;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 0 0 8px 8px;
     }
 
     .navbar ul li {
-        padding: 10px 0;
-    }
-
-    .navbar ul li a {
-        color: white;
-        opacity: 0.7;
-        font-size: 18px;
-    }
-
-    .offer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: relative;
-        font-size: 18px;
-    }
-
-    .navbar-btn {
-        display: flex;
-        max-height: 60px;
-        max-width: 90px;
-        justify-content: center;
-        align-items: center;
-        font-size: 14px;
+        padding: 8px 0;
     }
 
     .burger-menu {
-        display: block;
-        font-size: 2rem;
-        cursor: pointer;
-        color: white;
-        z-index: 10;
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 40px 15px;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .cta-btn {
-        font-size: 1.5rem;
-        padding: 10px 15px;
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    .about {
+        padding: 30px 15px;
+    }
+
+    .about h2 {
+        font-size: 1.4rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .services {
+        padding: 30px 15px;
+    }
+
+    .services h2 {
+        font-size: 1.4rem;
+    }
+
+    .service-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px 10px;
+    }
+
+    .service-item img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .reviews {
+        padding: 30px 15px;
+    }
+
+    .reviews h2 {
+        font-size: 1.4rem;
+    }
+
+    .review {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 376px) {
     header {
-        background: none;
+        height: 55px;
+        padding: 5px 10px;
     }
-    
+
     .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 95%;
-        height: 100%;
-        position: relative;
     }
 
     .navbar-logo {
-        font-size: 1.2rem;
-        align-items: center;
+        display: flex;
+        position: relative;
+    }
+    
+    .navbar-logo a {
+        display: flex;
+        font-size: 1.3rem;
+        position: relative;
+    }
+
+    .navbar-btn {
         display: none;
     }
 
     .navbar ul {
-        display: none;
-        text-align: center;
-        align-items: center;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .navbar ul.active {
-        display: flex;
-        flex-direction: flex-end;
-        top: 0;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 55px;
         left: 0;
-        margin-left: 10px;
-        min-width: 100%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
-        position: relative;
-        border-radius: 5px;
+        background: #222;
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 0 0 8px 8px;
     }
 
     .navbar ul li {
-        padding: 1px;
+        padding: 7px 0;
     }
 
     .navbar ul li a {
-        color: white;
-        opacity: 0.7;
-        font-size: 16px;
-    }
-
-    .offer {
-        margin: auto;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: relative;
-        font-size: 14px;
-    }
-
-    .navbar-btn {
-        display: flex;
-        max-height: 40px;
-        max-width: 70px;
-        justify-content: center;
-        align-items: center;
-        font-size: 14px;
+        justify-content: flex-start;
     }
 
     .burger-menu {
-        display: block;
-        font-size: 2rem;
-        cursor: pointer;
-        color: white;
-        z-index: 10;
+        font-size: 1.6rem;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 30px 10px;
     }
 
     .hero h1 {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
     .hero p {
-        top: 15px;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .cta-btn {
-        font-size: 1rem;
-        padding: 10px 15px;
+        font-size: 1.2rem;
+        padding: 7px 10px;
+        margin-top: 10px;
     }
 
-    span {
-        display: flex;
-        justify-content: center;
-        font-size: 25px;
-        margin: auto;
+    .about {
+        padding: 25px 10px;
     }
-    
-    .about-content h3 {
-        margin: auto;
+
+    .about .game-title {
+        font-size: 1.3rem;
+    }
+
+    .about p {
+        font-size: 0.95rem;
+    }
+
+    .services {
+        padding: 25px 10px;
+    }
+
+    .services h2 {
+        font-size: 1.3rem;
+    }
+
+    .service-item {
         display: flex;
-        flex-wrap: wrap;
-        max-width: 80%;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        font-size: 16px;
-        opacity: 0.7;
+        padding: 12px 8px;
+    }
+
+    .service-item img {
+        max-width: 75%;
+        height: auto;
+    }
+
+    .reviews {
+        padding: 25px 10px;
+    }
+
+    .reviews h2 {
+        font-size: 1.3rem;
+    }
+
+    .review {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    footer {
+        text-align: center;
+        padding: 12px;
+        font-size: 0.85rem;
     }
 }
 
