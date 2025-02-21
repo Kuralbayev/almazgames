@@ -1,66 +1,43 @@
-// Получаем элементы
 const burgerMenu = document.querySelector('.burger-menu');
 const navbarUl = document.querySelector('.navbar ul');
 
-// При клике на бургер меню показываем/скрываем список меню
 burgerMenu.addEventListener('click', () => {
     navbarUl.classList.toggle('active');
     burgerMenu.classList.toggle('active');
 });
 
+var swiper1 = new Swiper(".mySwiper1", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+});
 
-let isScrolling = false;
-const sections = document.querySelectorAll('section');
+var swiper2 = new Swiper(".mySwiper2", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+});
 
-function scrollToSection(target) {
-  target.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-  });
-}
-
-function getCurrentSection() {
-
-  const sectionsArray = Array.from(sections);
-  let currentSection = sectionsArray.find(section => {
-    const rect = section.getBoundingClientRect();
-    return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
-  });
-  
-  if (!currentSection) {
-    currentSection = sections[0];
-  }
-  return currentSection;
-}
-
-window.addEventListener('wheel', function (e) {
-  if (isScrolling) return;
-
-  const scrollDirection = e.deltaY > 0 ? 'down' : 'up'; 
-
-  const currentSection = getCurrentSection();
-
-  let targetSection;
-
-  if (scrollDirection === 'down') {
-  
-    if (currentSection === sections[sections.length - 1]) {
-      e.preventDefault();
-      return;
+function startCountdown(duration) {
+        let timer = duration, hours, minutes, seconds;
+        setInterval(function () {
+            hours = Math.floor(timer / 3600);
+            minutes = Math.floor((timer % 3600) / 60);
+            seconds = timer % 60;
+            document.querySelector(".countdown").textContent =
+                (hours < 10 ? "0" : "") + hours + ":" +
+                (minutes < 10 ? "0" : "") + minutes + ":" +
+                (seconds < 10 ? "0" : "") + seconds;
+            if (--timer < 0) {
+                timer = duration;
+            }
+        }, 1000);
     }
-    targetSection = currentSection.nextElementSibling || sections[0];
-  } else if (scrollDirection === 'up') {
- 
-    if (currentSection === sections[0]) {
-      e.preventDefault();
-      return;
-    }
-    targetSection = currentSection.previousElementSibling || sections[sections.length - 1];
-  }
-
-  if (targetSection) {
-    scrollToSection(targetSection);
-  }
+    startCountdown(86400); // 24 часа в секундах
 
   isScrolling = true;
   setTimeout(() => {
