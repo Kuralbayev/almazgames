@@ -1,148 +1,241 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alluring Treasures</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <meta name="description" content="Настольная игра Alluring Treasures для любителей приключений и древних легенд. Только 50 коробок в продаже!">
-    <meta name="keywords" content="настольная игра, Alluring Treasures, приключения, стратегическая игра, редкая игра">
-    <meta name="author" content="Almaz Games">
-    <meta property="og:title" content="Alluring Treasures - Настольная игра">
-    <meta property="og:description" content="Ограниченный тираж - только 50 коробок! Погрузись в мир приключений.">
-    <meta property="og:image" content="images/alluring_treasure.jpg">
-    <meta property="og:url" content="https://example.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@700;900&family=Noto+Sans+Cuneiform&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script defer src="javascript.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alluring Treasures</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <meta name="description" content="Настольная игра Alluring Treasures для любителей приключений и древних легенд. Только 50 коробок в продаже!">
+  <meta name="keywords" content="настольная игра, Alluring Treasures, приключения, стратегическая игра, редкая игра">
+  <meta name="author" content="Almaz Games">
+  <meta property="og:title" content="Alluring Treasures - Настольная игра">
+  <meta property="og:description" content="Ограниченный тираж - только 50 коробок! Погрузись в мир приключений.">
+  <meta property="og:image" content="images/alluring_treasure.jpg">
+  <meta property="og:url" content="https://example.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@700;900&family=Noto+Sans+Cuneiform&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script defer src="javascript.js"></script>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="navbar-logo">
-                <a href="#">Alluring Treasure</a>
-            </div>
-
-            <div class="burger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <ul>
-                <li><a href="#hero">Главная</a></li>
-                <li><a href="#about">О игре</a></li>
-                <li><a href="#reviews">Отзывы</a></li>
-            </ul>
-            <div class="offer">🔥Только 50 коробок!</div>
-            <button class="navbar-btn">Купить</button>
-        </div>
-    </header>
+  <header>
+    <div class="navbar">
+      <div class="navbar-logo">
+        <a href="#">Alluring Treasure</a>
+      </div>
       
-    <main>
-        <section class="hero" id="hero">
-            <div class="hero-content">
-                <h1>Игра для настоящих искателей приключений!</h1>
-                <p>Ограниченный тираж – только <span>50 коробок!</span></p>
-                <button class="cta-btn">Купить</button>
+      <div class="language-switch">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="kz">KZ</button>
+      </div>
+      
+      <div class="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul>
+        <li><a href="#hero">Главная</a></li>
+        <li><a href="#about">О игре</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+      </ul>
+      <div class="offer">🔥Только 50 коробок!</div>
+      <button class="navbar-btn">Купить</button>
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1>Игра для настоящих искателей приключений!</h1>
+        <p>Ограниченный тираж – только <span>50 коробок!</span></p>
+        <button class="cta-btn">Купить</button>
+      </div>
+    </section>
+    
+    <section id="about" class="about-slider">
+      <div class="container">
+        <div class="slider-container slider-one" data-aos="fade-up">
+          <div class="swiper mySwiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/about-img.jpg" alt="Слайд 1">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/about-img1.jpg" alt="Слайд 2">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/about-img2.jpg" alt="Слайд 3">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/about-img3.jpg" alt="Слайд 4">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/about-img4.jpg" alt="Слайд 5">
+              </div>
             </div>
-        </section>
-
-        <section id="about" class="about-slider">
-            <div class="container">
-                <h2 class="game-title">Alluring Treasure – настольная игра</h2>
-    
-                <div class="slider-container slider-one" data-aos="fade-up">
-                    <div class="swiper mySwiper1">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="images/about-img.jpg" alt="Слайд 1">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="images/about-img1.jpg" alt="Слайд 2">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="images/about-img2.jpg" alt="Слайд 3">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="images/about-img3.jpg" alt="Слайд 4">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="images/about-img4.jpg" alt="Слайд 5">
-                            </div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                </div>
-    
-                <div class="info-block" data-aos="fade-up">
-                    <p>Погрузитесь в мир приключений и сокровищ! В этой игре вам предстоит искать артефакты, сражаться с соперниками и добывать золото. Только самый хитрый и удачливый станет победителем!</p>
-                    <button class="cta-btn">Купить игру</button>
-                </div>
-    
-                <div class="slider-container slider-two" data-aos="fade-up">
-                    <div class="swiper mySwiper2">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="images/what-in-the-box.png" alt="Главное изображение">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="images/game-table.png" alt="Игровой стол">
-                                <div class="slide-tooltip">Игровое поле...</div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="images/artifact-card.png" alt="Карта артефакта">
-                                <div class="slide-tooltip">Карты артефактов...</div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                </div>
-                <div class="fomo-section" data-aos="fade-up">
-                    <h2>Почему купить прямо сейчас?</h2>
-                    <p class="fomo-subtitle">Эта игра – не просто развлечение, а уникальное приключение, доступное ограниченному кругу людей! 🏆</p>
-                    
-                    <div class="fomo-content">
-                        <div class="fomo-item">
-                            <span class="icon">🔥</span>
-                            <div class="fomo-text">
-                                <h3>Ограниченный тираж</h3>
-                                <p>Только <span class="highlight">50 коробок</span> в продаже! Успей куить! ⏳</p>
-                            </div>
-                        </div>
-                
-                        <div class="fomo-item">
-                            <span class="icon">🚚</span>
-                            <div class="fomo-text">
-                                <h3>Бесплатная доставка по Казахстану</h3>
-                                <p>Мы сами оплатим доставку до вашего порога! 📦 Просто закажите игру и расслабьтесь – она уже летит к вам! 🚀</p>
-                            </div>
-                        </div>
-                
-                        <div class="fomo-item">
-                            <span class="icon">⏰</span>
-                            <div class="fomo-text">
-                                <h3>Таймер обратного отсчёта</h3>
-                                <p>До конца акции осталось: <span class="countdown">00:00:00</span> ⏳ Спешите, пока цена выгоднее всего!</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="cta-btn">Оформить заказ</button>
-                </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        
+        <section id="how-to-play" class="how-to-play" data-aos="fade-up">
+          <div class="container">
+            <h2>Как играть?</h2>
+            <p>В игре Alluring Treasure игроки отправляются на поиски древних артефактов, преодолевают ловушки и участвуют в стратегических сражениях.</p>
+            <div class="mechanics">
+              <div class="mechanic">
+                <img src="images/aphrodite.png" alt="Поиск артефактов">
+                <h3>Поиск артефактов</h3>
+                <p>Исследуйте мир в поисках древних сокровищ.</p>
+              </div>
+              <div class="mechanic">
+                <img src="images/wheel.png" alt="Колесо фортуны">
+                <h3>Колесо фортуны</h3>
+                <p>Испытайте удачу на колесе фортуны.</p>
+              </div>
+              <div class="mechanic">
+                <img src="images/femida.png" alt="Стратегические ловушки">
+                <h3>Стратегические ловушки</h3>
+                <p>Используйте ловушки для победы над соперниками.</p>
+              </div>
             </div>
-        </section>             
-
-        <section class="reviews" id="reviews">
-            <h2>Отзывы...</h2>
+            <div class="video-preview">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_bLVyRnzr7Q?si=CbPI3z7iO8olhdXB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
         </section>
-    </main>
+        
+        <div class="slider-container slider-two" data-aos="fade-up">
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/what-in-the-box.png" alt="Главное изображение">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/game-table.png" alt="Игровой стол">
+                <div class="slide-tooltip">Игровое поле...</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/artifact-card.png" alt="Карта артефакта">
+                <div class="slide-tooltip">Карты артефактов...</div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        
+        <div class="fomo-section" data-aos="fade-up">
+          <h2>Почему купить прямо сейчас?</h2>
+          <p class="fomo-subtitle">Эта игра – не просто развлечение, а уникальное приключение, доступное ограниченному кругу людей! 🏆</p>
+          <div class="fomo-content">
+            <div class="fomo-item">
+              <span class="icon">🔥</span>
+              <div class="fomo-text">
+                <h3>Ограниченный тираж</h3>
+                <p>Всего <span class="highlight">50 коробок</span> в мире! После распродажи переиздание не планируется. Это ваш шанс стать владельцем эксклюзивного набора! ⏳</p>
+              </div>
+            </div>
+            <div class="fomo-item">
+              <span class="icon">🚚</span>
+              <div class="fomo-text">
+                <h3>Бесплатная доставка по Казахстану</h3>
+                <p>Мы оплатим доставку до вашего порога! 📦 Просто закажите игру – она уже в пути! 🚀</p>
+              </div>
+            </div>
+            <div class="fomo-item">
+              <span class="icon">⏰</span>
+              <div class="fomo-text">
+                <h3>Таймер обратного отсчёта</h3>
+                <p>До конца акции осталось: <span class="countdown">00:00:00</span> ⏳ Спешите, пока цена выгоднее всего!</p>
+              </div>
+            </div>
+          </div>
+          <button class="cta-btn">Оформить заказ</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" data-aos="fade-up">
+        <div class="container">
+          <h2>Часто задаваемые вопросы</h2>
+          <div class="faq-item">
+            <h3>Сколько длится доставка?</h3>
+            <p>Доставка по Казахстану занимает от 2 до 7 дней.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Какие способы оплаты доступны?</h3>
+            <p>Оплату можно произвести через Kaspi Магазин и онлайн-платежи.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Будет ли ещё партия игр?</h3>
+            <p>Пока что это ограниченный тираж, следите за обновлениями.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Игра подходит для детей?</h3>
+            <p>Да, возрастная рекомендация 8+.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Можно ли купить игру в розничных магазинах?</h3>
+            <p>Нет, игра доступна только онлайн.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Входит ли инструкция в коробку?</h3>
+            <p>Да, подробная инструкция на русском и казахском языках включена.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Как узнать, сколько коробок осталось?</h3>
+            <p>На сайте отображается актуальное количество оставшихся игр.</p>
+          </div>
+        </div>
+      </section>
+    
+    <section class="reviews" id="reviews" data-aos="fade-up">
+      <div class="container">
+        <h2>Отзывы</h2>
+        <div class="reviews-content">
+            нужно уточнить
+        </div>
+      </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-top">
+            <div class="footer-contact">
+              <h3>Свяжитесь с нами</h3>
+              <p>Email: unknown</p>
+              <p>Телефон: +7 (775) 187 5748</p>
+            </div>
+            <div class="footer-links">
+              <h3>Полезные ссылки</h3>
+              <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Условия использования</a></li>
+              </ul>
+            </div>
+            <div class="footer-social">
+              <h3>Мы в соцсетях</h3>
+              <ul>
+                <li><a href="#" target="_blank">Facebook</a></li>
+                <li><a href="#" target="_blank">Instagram</a></li>
+                <li><a href="#" target="_blank">Twitter</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 Alluring Treasures. Все права защищены.</p>
+          </div>
+        </div>
+    </footer>
+  </main>
 </body>
 </html>
