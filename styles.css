@@ -43,7 +43,6 @@ body {
     background-size: cover;
     font-family: "Merriweather", serif;
     font-style: normal;
-    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -97,7 +96,7 @@ header::before {
     align-items: center;
     justify-content: center;
     display: flex;
-    font-family: "Carter One", serif;
+    font-family: "Russo One", serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -768,14 +767,44 @@ header::before {
 @media (max-width: 1024px) {
     .offer {
         margin-right:20px;
-        padding: 15px 40px;
+        padding: 15px 45px;
         text-align: center;
         display: flex;
         justify-content: center;
+        font-size: 16px;
+    }
+
+    .language-switch {
+        margin-right: 20px;
     }
 
     .hero {
-        background-image: url(images/device-background.jpg);
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url(images/alluring\ treasure.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    
+    .hero * {
+        position: relative;
+        z-index: 2;
     }
 
     .about {
@@ -789,6 +818,12 @@ header::before {
     .navbar ul {
         gap: 10px;
     }
+
+    .navbar ul li a {
+        align-items: center;
+        text-align: center;
+        font-size: 16px;
+    }
     
     .hero h1 {
         font-size: 2.5rem;
@@ -796,6 +831,14 @@ header::before {
     
     .hero p {
         font-size: 1.3rem;
+    }
+
+    .fomo-section {
+        height: 120vh;
+    }
+
+    .fomo-content {
+        height: 100%;
     }
 }
 
@@ -853,11 +896,36 @@ header::before {
         font-size: 2rem;
         cursor: pointer;
         color: white;
+        justify-content: center;
     }
 
     .hero {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url(images/alluring\ treasure.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        padding: 50px 20px;
+    }
+    
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    
+    .hero * {
+        position: relative;
+        z-index: 2;
     }
 
     .hero h1 {
@@ -884,9 +952,27 @@ header::before {
     .about p, .services p, .reviews p {
         font-size: 1.1rem;
     }
+
+    .fomo-section {
+        height: 140vh;
+    }
 }
 
 @media (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        min-width: 100%;
+    }
+
+    section {
+        min-height: 100%;
+    }
+    
     header {
         height: 60px;
         padding: 8px 15px;
@@ -918,8 +1004,32 @@ header::before {
     }
 
     .hero {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url(images/alluring\ treasure.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        padding: 40px 15px;
+    }
+    
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    
+    .hero * {
+        position: relative;
+        z-index: 2;
     }
 
     .hero h1 {
@@ -929,6 +1039,10 @@ header::before {
     .hero p {
         font-size: 1rem;
     }
+
+    .video-preview iframe {
+        width: 100%;
+    }
 }
 
 @media (max-width: 376px) {
@@ -936,13 +1050,26 @@ header::before {
         height: 55px;
         padding: 5px 10px;
     }
+    .language-switch {
+        display: none;
+    }
     .navbar-logo a {
         font-size: 1.3rem;
     }
     .navbar-btn {
-        display: none;
+        display: flex;
+        height: 40px;
+        width: 80px;
+        text-align: center;
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
     }
     .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         height: 100vh;
         position: absolute;
         top: 55px;
@@ -953,6 +1080,7 @@ header::before {
     }
     .navbar ul li {
         padding: 7px 0;
+        margin: 0;
     }
     .navbar ul li a {
         justify-content: flex-start;
@@ -962,12 +1090,87 @@ header::before {
     }
     .hero {
         padding: 30px 10px;
+        background: url(images/device-background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: (0, 0, 0, 0.5 black);
+        z-index: 1;
+    }
+    .hero * {
+        z-index: 2;
     }
     .hero h1 {
         font-size: 2rem;
     }
     .hero p {
         font-size: 1.2rem;
+    }
+    .video-preview iframe {
+        border-radius: 15px;
+    }
+    .slider-container {
+        height: 100vh;
+        margin-bottom: 50px;
+        margin-top: -50px;
+    }
+    .slider-container img {
+        width: 300px;
+        height: 150px;
+    }
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .how-to-play {
+        width: 377px;
+        border-radius: 0;
+    }
+    .how-to-play .container p {
+        height: 50%;
+        font-size: 14px;
+        opacity: 0.7;
+    }
+    .fomo-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .fomo-section h2 {
+        margin-top: 0;
+    }
+    .fomo-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: auto;
+        height: 50%;
+    }
+    .fomo-subtitle {
+        font-size: 16px;
+    }
+    .fomo-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+    .fomo-text p {
+        display: none;
+    }
+    .fomo-text h3 {
+        font-size: 14px;
+    }
+    .fomo-content p {
+        font-size: 16px;
     }
     footer {
         padding: 12px;
