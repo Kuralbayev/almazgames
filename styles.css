@@ -9,29 +9,29 @@
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-  }
+}
   
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: gold;
     border-radius: 10px;
-  }
+}
   
-  ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background-color: #555;
     height: 10%;
-  }
+}
   
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background-color: #020202;
-  }
+}
   
-  ::-webkit-scrollbar-horizontal {
+::-webkit-scrollbar-horizontal {
     height: 8px;
-  }
+}
   
-  ::-webkit-scrollbar-vertical {
+::-webkit-scrollbar-vertical {
     width: 8px;
-  }
+}
   
 html {
     scroll-behavior: smooth;
@@ -43,6 +43,8 @@ body {
     background-size: cover;
     font-family: "Merriweather", serif;
     font-style: normal;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -104,6 +106,28 @@ header::before {
     cursor: pointer;
 }
 
+.language-switch {
+    display: flex;
+    gap: 10px;
+}
+
+.language-switch .lang-btn {
+    background: transparent;
+    border: 1px solid gold;
+    color: gold;
+    margin-left: 20px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.language-switch .lang-btn.active,
+.language-switch .lang-btn:hover {
+    background: gold;
+    color: #121212;
+}
+
 .navbar ul {
     list-style-type: none;
     display: flex;
@@ -116,7 +140,7 @@ header::before {
 }
 
 .navbar ul li {
-    margin: auto
+    margin: auto;
 }
 
 .navbar ul li a {
@@ -155,7 +179,7 @@ header::before {
     color: gold;
     background: rgba(255, 165, 0, 0.2);
     border-color: orange;
-    box-shadow: 0 0 25px rgba(255, 165, 0, 0.8), 
+    box-shadow: 0 0 25px rgba(255, 165, 0, 0.8),
                 0 0 50px rgba(255, 140, 0, 0.6);
     animation: fireGlow 1.5s infinite alternate;
 }
@@ -225,6 +249,44 @@ header::before {
     animation: fireGlow 1.5s infinite alternate;
 }
 
+.burger-menu {
+    display: none;
+}
+
+.burger-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    transition: all 0.3s;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger-menu.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.navbar ul.active {
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero {
     position: relative;
     width: 100%;
@@ -278,61 +340,6 @@ header::before {
     text-shadow: 2px 2px 0px #000000, 4px 4px 5px rgba(0, 0, 0, 0.3);
 }
 
-.hero p span {
-    padding: 10px;
-    color: gold;
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 0px 0px 10px rgba(255, 204, 102, 0.8);
-}
-
-.cta-btn {
-    margin-top: 20px;
-    padding: 15px 20px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(45deg, #ff9800, #ff5722);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.7);
-    font-family: "Russo One", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.cta-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 30px rgba(255, 140, 0, 1);
-    background: linear-gradient(45deg, #ff5722, #ff9800);
-    animation: fireGlow 1.5s infinite alternate;
-}
-
-.about-slider {
-    width: 100%;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.title h2 {
-    font-size: 2.5rem;
-    color: gold;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
-}
-
-.title p {
-    font-size: 1.2rem;
-    color: white;
-    margin-bottom: 20px;
-}
-
 .cta-btn {
     display: inline-block;
     padding: 12px 24px;
@@ -345,42 +352,48 @@ header::before {
     transition: 0.3s;
     border: none;
     cursor: pointer;
-}
-
-.cta-btn:hover {
-    background: darkgoldenrod;
-    color: white;
-}
-
-.about-slider {
-    width: 100%;
-    padding: 80px 20px;
-    color: white;
-    text-align: center;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px;
-}
-
-.game-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: gold;
-    margin-bottom: 40px;
     font-family: "Russo One", serif;
     font-weight: 400;
     font-style: normal;
 }
 
+.cta-btn:hover {
+    transform: scale(1.1);
+    background: darkgoldenrod;
+    color: white;
+    box-shadow: 0 0 30px rgba(255, 140, 0, 1);
+    animation: fireGlow 1.5s infinite alternate;
+}
+
+.hero p span {
+    padding: 10px;
+    color: gold;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(255, 204, 102, 0.8);
+}
+
+.about-slider {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 30px;
+}
+
 .slider-container {
+    position: relative;
     width: 100%;
     max-width: 900px;
-    margin: 0 auto 60px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 15px;
     background: url('images/alluring treasure.jpg') no-repeat center center;
     background-size: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .slider-container::before {
@@ -390,13 +403,9 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: -1;
-}
-
-.swiper-slide {
-    position: relative;
-    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .swiper-slide {
@@ -404,16 +413,19 @@ header::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .swiper-slide img {
+    width: 100%;
     height: 500px;
     object-fit: cover;
+    border-radius: inherit;
+    transition: transform 0.3s ease;
 }
 
-.swiper-slide1 {
-    position: relative;
-    overflow: hidden;
+.swiper-slide:hover img {
+    transform: scale(1.02);
 }
 
 .swiper-slide1 {
@@ -421,28 +433,37 @@ header::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .swiper-slide1 img {
-    width: 907px;
-    height: 641px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: inherit;
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide1:hover img {
+    transform: scale(1.02);
 }
 
 .slide-tooltip {
     position: absolute;
-    width: 708px;
-    height: 641px;
-    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     color: gold;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
     opacity: 0;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 0.5s ease;
     pointer-events: none;
 }
 
@@ -450,29 +471,74 @@ header::before {
     opacity: 1;
 }
 
-.swiper-slide:not(:hover) .slide-tooltip {
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
+.how-to-play {
+    position: relative;
+    width: 100vw;
+    left: calc(-50vw + 49.6%);
+    padding: 60px 20px;
+    border-radius: 15px;
+    text-align: center;
+    background: #111;
+    color: #fff;
+    margin-bottom: 60px;
 }
 
-.swiper-slide img {
-    width: 100%;
-    border-radius: 16px;
-}
-
-.info-block {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 30px;
-    background: rgba(255, 215, 0, 0.1);
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-}
-
-.info-block p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+.how-to-play h2 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    color: gold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    font-family: "Russo One", serif;
+    font-weight: 400;
+}
+
+.how-to-play p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.how-to-play .mechanics {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.how-to-play .mechanic {
+    flex: 1 1 200px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.how-to-play .mechanic img {
+    width: auto;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.how-to-play .mechanic h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+.how-to-play .mechanic p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.video-preview {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+.video-preview video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .mySwiper2 {
@@ -498,43 +564,53 @@ header::before {
 }
 
 .fomo-section {
-    margin-top: 100px;
+    position: relative;
+    width: 100vw;
     height: 100vh;
+    left: calc(-50vw + 50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 15px;
+    color: #f5f5f5;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #333);
 }
 
 .fomo-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 10px;
     color: gold;
     font-family: "Russo One", serif;
-    font-weight: 400;
-    font-style: normal;
+}
+
+.fomo-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ccc;
 }
 
 .fomo-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 80%;
+    gap: 15px;
+    width: 50%;
     max-width: 600px;
 }
 
 .fomo-item {
     display: flex;
     align-items: center;
-    gap: 15px;
-    font-size: 1.4rem;
-    padding: 10px 0;
+    gap: 10px;
+    font-size: 1.2rem;
+    padding: 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.fomo-item:hover {
+    transform: translateX(5px);
 }
 
 .fomo-item:last-child {
@@ -543,27 +619,60 @@ header::before {
 
 .fomo-item .icon {
     font-size: 2rem;
-}
-
-.fomo-item .highlight {
     color: gold;
-    font-weight: bold;
 }
 
 .cta-btn {
-    margin-top: 25px;
-    padding: 12px 25px;
-    font-size: 1.2rem;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
     font-weight: bold;
     background: gold;
-    color: black;
+    color: #121212;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.cta-btn:active {
-    background: #e6b800;
+.cta-btn:hover {
+    transform: scale(1.05);
+    background: darkgoldenrod;
+}
+
+.faq {
+    padding: 60px 20px;
+    background: #222;
+    color: #fff;
+}
+
+.faq h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: gold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    font-family: "Russo One", serif;
+    font-weight: 400;
+}
+
+.faq .faq-item {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+}
+
+.faq .faq-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+.faq .faq-item p {
+    font-size: 1.1rem;
+    line-height: 1.4;
 }
 
 .reviews {
@@ -598,10 +707,62 @@ header::before {
 .reviews h2 {
     color: gold;
     font-size: 30px;
+    font-family: "Russo One", serif;
 }
 
-.burger-menu {
-    display: none;
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-top > div {
+    flex: 1 1 250px;
+}
+
+.footer-top h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+.footer-top ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-top ul li {
+    margin-bottom: 8px;
+}
+
+.footer-top ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-top ul li a:hover {
+    color: gold;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 1024px) {
@@ -723,11 +884,6 @@ header::before {
     .about p, .services p, .reviews p {
         font-size: 1.1rem;
     }
-
-    .cta-btn {
-        font-size: 1.3rem;
-        padding: 10px 15px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -773,63 +929,6 @@ header::before {
     .hero p {
         font-size: 1rem;
     }
-
-    .cta-btn {
-        font-size: 1rem;
-        padding: 8px 12px;
-    }
-
-    .about {
-        padding: 30px 15px;
-    }
-
-    .about h2 {
-        font-size: 1.4rem;
-    }
-
-    .about p {
-        font-size: 1rem;
-    }
-
-    .services {
-        padding: 30px 15px;
-    }
-
-    .services h2 {
-        font-size: 1.4rem;
-    }
-
-    .service-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 15px 10px;
-    }
-
-    .service-item img {
-        max-width: 80%;
-        height: auto;
-    }
-
-    .reviews {
-        padding: 30px 15px;
-    }
-
-    .reviews h2 {
-        font-size: 1.4rem;
-    }
-
-    .review {
-        padding: 15px;
-        font-size: 1rem;
-    }
-
-    footer {
-        text-align: center;
-        padding: 15px;
-        font-size: 0.9rem;
-    }
 }
 
 @media (max-width: 376px) {
@@ -837,162 +936,41 @@ header::before {
         height: 55px;
         padding: 5px 10px;
     }
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .navbar-logo {
-        display: flex;
-        position: relative;
-    }
-    
     .navbar-logo a {
-        display: flex;
         font-size: 1.3rem;
-        position: relative;
     }
-
     .navbar-btn {
         display: none;
     }
-
     .navbar ul {
-        width: 100%;
         height: 100vh;
         position: absolute;
         top: 55px;
         left: 0;
         background: #222;
-        text-align: center;
         padding: 8px 0;
         border-radius: 0 0 8px 8px;
     }
-
     .navbar ul li {
         padding: 7px 0;
     }
-
     .navbar ul li a {
-        display: flex;
         justify-content: flex-start;
     }
-
     .burger-menu {
         font-size: 1.6rem;
     }
-
     .hero {
-        text-align: center;
         padding: 30px 10px;
     }
-
     .hero h1 {
         font-size: 2rem;
     }
-
     .hero p {
         font-size: 1.2rem;
     }
-
-    .cta-btn {
-        font-size: 1.2rem;
-        padding: 7px 10px;
-        margin-top: 10px;
-    }
-
-    .about {
-        padding: 25px 10px;
-    }
-
-    .about .game-title {
-        font-size: 1.3rem;
-    }
-
-    .about p {
-        font-size: 0.95rem;
-    }
-
-    .services {
-        padding: 25px 10px;
-    }
-
-    .services h2 {
-        font-size: 1.3rem;
-    }
-
-    .service-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 12px 8px;
-    }
-
-    .service-item img {
-        max-width: 75%;
-        height: auto;
-    }
-
-    .reviews {
-        padding: 25px 10px;
-    }
-
-    .reviews h2 {
-        font-size: 1.3rem;
-    }
-
-    .review {
-        padding: 12px;
-        font-size: 0.95rem;
-    }
-
     footer {
-        text-align: center;
         padding: 12px;
         font-size: 0.85rem;
     }
 }
-
-.burger-menu span {
-    display: block;
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    margin: 6px 0;
-    transition: all 0.3s;
-}
-
-.burger-menu.active span:nth-child(1) {
-    transform: rotate(45deg);
-    position: relative;
-    top: 10px;
-}
-
-.burger-menu.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.burger-menu.active span:nth-child(3) {
-    transform: rotate(-45deg);
-    position: relative;
-    top: -10px;
-}
-
-.navbar ul.active {
-    animation: slideIn 0.3s ease-out forwards;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
