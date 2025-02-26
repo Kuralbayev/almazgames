@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Russo+One&family=Carter+One&family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Russo+One&family=Carter+One&family=Passion+One:wght@400;700;900&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
 
 * {
     margin: 0;
@@ -57,6 +57,11 @@ body::before {
     z-index: -1;
 }
 
+.icon {
+    width: auto;
+    height: 100%;
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -78,6 +83,13 @@ header::before {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: -1;
+}
+
+h3, p {
+    font-family: "Literata", serif !important;
+    font-optical-sizing: auto !important;
+    font-weight: weight !important;
+    font-style: normal !important;
 }
 
 .navbar {
@@ -297,6 +309,7 @@ header::before {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin: 0 auto;
 }
 
 .hero::before {
@@ -333,7 +346,7 @@ header::before {
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: white;
     text-shadow: 2px 2px 0px #000000, 4px 4px 5px rgba(0, 0, 0, 0.3);
@@ -387,7 +400,7 @@ header::before {
     position: relative;
     width: 100%;
     max-width: 900px;
-    margin: 40px auto;
+    margin: 30px auto;
     overflow: hidden;
     border-radius: 15px;
     background: url('images/alluring treasure.jpg') no-repeat center center;
@@ -473,9 +486,8 @@ header::before {
 .how-to-play {
     position: relative;
     width: 100vw;
-    left: calc(-50vw + 49.6%);
+    left: calc(-50vw + 50%);
     padding: 60px 20px;
-    border-radius: 15px;
     text-align: center;
     background: #111;
     color: #fff;
@@ -578,7 +590,7 @@ header::before {
 }
 
 .fomo-section h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
     color: gold;
     font-family: "Russo One", serif;
@@ -620,6 +632,89 @@ header::before {
     font-size: 2rem;
     color: gold;
 }
+
+.conversion-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    margin: 0;
+    margin-top: -90px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .rarity-banner {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffcc00;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 25px;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .social-proof {
+    margin-bottom: 30px;
+  }
+  
+  .social-proof h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+  }
+  
+  .social-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .social-logo {
+    max-width: 130px;
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .social-logo:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
+  .cta-container {
+    margin-top: 30px;
+  }
+  
+  .cta-btn {
+    background: #ffcc00;
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cta-btn:hover {
+    background: #ffdd44;
+    transform: scale(1.05);
+  }
 
 .cta-btn {
     margin-top: 15px;
@@ -1046,6 +1141,9 @@ header::before {
 }
 
 @media (max-width: 376px) {
+    body {
+        width: 100%;
+    }
     header {
         height: 55px;
         padding: 5px 10px;
