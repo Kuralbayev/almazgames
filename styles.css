@@ -1054,89 +1054,162 @@ h3, p {
 }
 
 @media (max-width: 480px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
     body {
-        min-width: 100%;
+        width: 100%;
     }
-
-    section {
-        min-height: 100%;
-    }
-    
     header {
-        height: 60px;
-        padding: 8px 15px;
+        height: 55px;
+        padding: 5px 10px;
     }
-
-    .navbar {
-        justify-content: space-between;
+    .language-switch {
+        display: none;
+    }
+    .navbar-logo a {
+        font-size: 1.3rem;
+    }
+    .navbar-btn {
+        display: flex;
+        height: 40px;
+        width: 80px;
+        text-align: center;
+        font-size: 14px;
+        justify-content: center;
         align-items: center;
     }
-
     .navbar ul {
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: #222;
         flex-direction: column;
-        text-align: center;
-        padding: 10px 0;
-        border-radius: 0 0 8px 8px;
-    }
-
-    .navbar ul li {
-        padding: 8px 0;
-    }
-
-    .burger-menu {
-        font-size: 1.8rem;
-    }
-
-    .hero {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        background-image: url(images/alluring\ treasure.jpg);
-        background-size: cover;
-        background-position: center;
-        display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
+        height: 100vh;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        background: #222;
+        padding: 8px 0;
+        border-radius: 0 0 8px 8px;
     }
-    
+    .navbar ul li {
+        padding: 7px 0;
+        margin: 0;
+    }
+    .navbar ul li a {
+        justify-content: flex-start;
+    }
+    .burger-menu {
+        font-size: 1.6rem;
+    }
+    .hero {
+        padding: 30px 10px;
+        background: url(images/device-background.jpg);
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .hero::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: (0, 0, 0, 0.5 black);
         z-index: 1;
     }
-    
     .hero * {
-        position: relative;
         z-index: 2;
     }
-
     .hero h1 {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
-
     .hero p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
-
-    .video-preview iframe {
+    .video-preview {
         width: 100%;
+        height: 100%;
+    }
+    .video-preview iframe {
+        border-radius: 15px;
+        width: 100%;
+        height: 250px;
+    }
+    .slider-container {
+        height: 100%;
+        width: 100%;
+        margin-top: -50px;
+        background: none;
+    }
+    .slider-container::before {
+        background: none;
+        box-shadow: none;
+    }
+    .slider-container img {
+        width: auto;
+        height: auto;
+    }
+    .swiper-slide {
+        background: none;
+        height: auto;
+    }
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide::before {
+        background: none;
+        box-shadow: none;
+    }
+    .swiper-button-next {
+        display: none;
+    }
+    .swiper-button-prev {
+        display: none;
+    }
+    .how-to-play .container p {
+        height: 50%;
+        font-size: 14px;
+        opacity: 0.7;
+    }
+    .fomo-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .fomo-section h2 {
+        margin-top: 0;
+    }
+    .fomo-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        height: 50%;
+    }
+    .fomo-subtitle {
+        font-size: 16px;
+    }
+    .fomo-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100px;
+    }
+    .fomo-text p {
+        display: none;
+    }
+    .fomo-text h3 {
+        font-size: 14px;
+    }
+    .fomo-content p {
+        font-size: 16px;
+    }
+    footer {
+        padding: 12px;
+        font-size: 0.85rem;
     }
 }
 
@@ -1189,6 +1262,7 @@ h3, p {
     .hero {
         padding: 30px 10px;
         background: url(images/device-background.jpg);
+        max-width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -1197,6 +1271,7 @@ h3, p {
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
         width: 100%;
         height: 100%;
         background-color: (0, 0, 0, 0.5 black);
@@ -1211,26 +1286,55 @@ h3, p {
     .hero p {
         font-size: 1.2rem;
     }
+    .video-preview {
+        width: 100%;
+        height: 100%;
+    }
     .video-preview iframe {
         border-radius: 15px;
+        max-width: 100%;
+        height: 250px;
     }
     .slider-container {
-        height: 100vh;
-        margin-bottom: 50px;
+        height: 100%;
         margin-top: -50px;
+        background: none;
+    }
+    .slider-container::before {
+        background: none;
+        box-shadow: none;
     }
     .slider-container img {
-        width: 300px;
+        width: 400px;
         height: 150px;
     }
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .mySwiper1 {
+        height: auto;
+        width: auto;
     }
-    .how-to-play {
-        width: 377px;
-        border-radius: 0;
+    .mySwiper2 {
+        margin-top: 30px;
+        height: auto;
+        width: auto;
+    }
+    .swiper-slide {
+        background: none;
+        height: 200px;
+        width: auto;
+    }
+    .swiper-slide img {
+        width: 450px;
+        height: 100%;
+    }
+    .swiper-slide::before {
+        background: none;
+        box-shadow: none;
+    }
+    .swiper-button-next {
+        display: none;
+    }
+    .swiper-button-prev {
+        display: none;
     }
     .how-to-play .container p {
         height: 50%;
@@ -1249,7 +1353,8 @@ h3, p {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        max-width: auto;
+        text-align: center;
+        max-width: 100%;
         height: 50%;
     }
     .fomo-subtitle {
@@ -1259,6 +1364,7 @@ h3, p {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
         height: 100px;
     }
     .fomo-text p {
